@@ -2,6 +2,36 @@
 import React, {useEffect, useState} from "react";
 import {signIn} from "next-auth/react";
 import {useRouter} from "next/navigation";
+import styled, {createGlobalStyle} from "styled-components";
+
+const GlobalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+`;
+
+const StyledInput=styled.input`
+  padding: 5px;
+  margin-left: 10px;
+  margin-right: 20px;
+  border-radius: 5px;
+  border-color: #c4c4c4;
+  border-width: thin;
+  text-shadow: black;
+`
+
+const StyledButton=styled.button`
+  padding: 5px 20px 5px 20px;
+  border-radius: 4px;
+  border-width: thin;
+  background-color: black;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  box-shadow: black;
+`
+
+const StyledLabel=styled.label`
+  font-family: 'Poppins', sans-serif;
+`
 
 export default function LoginForm() {
         const [email, setEmail] = useState("");
@@ -36,10 +66,10 @@ export default function LoginForm() {
             <div>
                 <form onSubmit={handleSubmit}>
                     <label>Email</label>
-                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                    <StyledInput type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                     <label>Password</label>
-                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-                    <button type="submit">Login</button>
+                    <StyledInput type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                    <StyledButton type="submit">Login</StyledButton>
                     <p>{errorMessage}</p>
                 </form>
             </div>
