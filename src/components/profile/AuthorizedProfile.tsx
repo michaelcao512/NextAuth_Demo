@@ -8,7 +8,7 @@ export default function AuthorizedProfile( props: {session: Session}) {
         <div>
             <h1>Profile</h1>
             <StyledP>Welcome {props.session?.user?.name}</StyledP>
-            <Link href="/">To Home</Link>
+            <Link href="/public">To Home</Link>
             <LogOutButton/>
         </div>
     )

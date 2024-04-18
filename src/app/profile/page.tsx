@@ -1,6 +1,6 @@
 import {getServerSession} from "next-auth";
-import AuthorizedProfile from "@/components/AuthorizedProfile";
-import UnauthorizedProfile from "@/components/UnauthorizeedProfile";
+import AuthorizedProfile from "@/components/profile/AuthorizedProfile";
+import UnauthorizedProfile from "@/components/profile/UnauthorizeedProfile";
 import {StyledP} from "@/StyledComponents";
 
 
