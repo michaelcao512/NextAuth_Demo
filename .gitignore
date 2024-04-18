@@ -1,0 +1,24 @@
+# build output
+dist
+!.github/actions/*/dist
+.next
+target
+packages/next/wasm/@next
+
+# dependencies
+node_modules
+package-lock.json
+
+# logs & pids
+*.log
+pids
+*.cpuprofile
+*.heapsnapshot
+
+.DS_Store
+
+**/.idea
+
+*.tsbuildinfo
+.swc/
+.turbo
