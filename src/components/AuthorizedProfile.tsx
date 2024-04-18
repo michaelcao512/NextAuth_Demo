@@ -1,4 +1,3 @@
-"use client"
 import Link from "next/link";
 import LogOutButton from "@/components/LogOutButton";
 import {Session} from "next-auth";
