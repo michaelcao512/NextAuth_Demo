@@ -6,7 +6,6 @@ import {StyledP} from "@/StyledComponents";
 
 export default async function Profile() {
     const session = await getServerSession();
-
     if (!session) {
         return (
             <>
@@ -17,7 +16,7 @@ export default async function Profile() {
     } else {
         return (
             <>
-                <AuthorizedProfile session={session}/>
+                <AuthorizedProfile/>
             </>
 
         )
