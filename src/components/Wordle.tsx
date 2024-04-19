@@ -4,8 +4,8 @@ import { styled } from '@stitches/react'
 import { useTrail, animated } from '@react-spring/web'
 
 const AppContainer = styled('div', {
-    width: '100vw',
-    height: '100vh',
+    // width: '100vw',
+    // height: '100vh',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -49,12 +49,14 @@ const BackBox = styled(animated.div, {
     color: '#fafafa',
 })
 
-const items = ['e', 'm', 'm', 'a']
 
-export default function App() {
+export default function Wordle( props: { name: string } ) {
+    const items = props.name?.split('');
+
     const [trail, api] = useTrail(items.length, () => ({
         rotateX: 0,
     }))
+
 
     const isFlipped = useRef(false)
 
