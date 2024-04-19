@@ -6,7 +6,7 @@ export default function UnauthorizedProfile() {
         <div>
             <h1>Profile</h1>
             <StyledP>You need to be logged in to view this page</StyledP>
-            <Link href="/public">To Login</Link>
+            <Link href="/">To Login</Link>
         </div>
     )
 }

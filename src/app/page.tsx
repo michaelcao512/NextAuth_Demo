@@ -7,7 +7,7 @@ export default async function Home() {
 
     //   session management on server components
     const session = await getServerSession();
-    console.log(session)
+    console.log("Session: ", session);
     if (!session) {
         return (
             <>
